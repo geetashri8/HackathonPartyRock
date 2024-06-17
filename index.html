@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Rock App</title>
+    <link rel="stylesheet" href="partyrock.css">
+</head>
+<body>
+    <script src="partyrock.js"></script>
+    <div class="container">
+        <h1>Word Pronunciation</h1>
+        <div id="bling" class="light-container">
+            <div class="light "></div>
+            <div class="light "></div>
+            <div class="light"></div>
+            <div class="light "></div>
+        </div>
+        <button id="partyButton">Start! </button>
+    </div>
+    
+    <script>
+          window.onload = function(){
+
+             let lights = document.querySelectorAll(".light");
+              lights.forEach((light) => {
+                setInterval(() => {
+                   let colors = ["red", "green", "blue", "yellow","purple"];
+                   let randomColor = colors[Math.floor(Math.random() * colors.length)];
+                   light.style.backgroundColor = randomColor;
+                   light.style.boxShadow = `0 0 20px ${randomColor}`;
+                 }, 500);
+             });
+
+          }
+        document.getElementById('partyButton').addEventListener('click', function() {
+            window.open('https://partyrock.aws/u/Sankuramsodhhi23/8rM9e97aR/Word-Pronunciation-Tutor-(English-and-Hindi)', '_blank');
+        });
+    </script>
+</body>
+</html>
